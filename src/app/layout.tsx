@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import { Box, Typography } from "@mui/material";
+import { Box, ThemeProvider, Typography } from "@mui/material";
+import {theme} from "../../style";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +24,9 @@ export default function RootLayout({
         <meta name="description" content="Aryaman Chandra's personal website" />
       </head>
       <body className={inter.className}>
-        <Navbar />
+        <ThemeProvider theme={theme}>
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );
