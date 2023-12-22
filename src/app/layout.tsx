@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Box, ThemeProvider, Typography } from "@mui/material";
-import {theme} from "../../style";
-import localFont from 'next/font/local'
+import { theme } from "../../style";
+import localFont from "next/font/local";
+import Navbar from "./components/Navbar";
 
-
-const SFText = localFont({ src: '../../public/fonts/SF-Pro-Text-Regular.otf', variable: '--font-sftext-bold'  })
+const SFText = localFont({
+  src: "../../public/fonts/SF-Pro-Text-Regular.otf",
+  variable: "--font-sftext-bold",
+});
 
 export const metadata: Metadata = {
   title: "Aryaman Chandra",
@@ -26,7 +29,10 @@ export default function RootLayout({
       </head>
       <body className={SFText.className}>
         <ThemeProvider theme={theme}>
-        {children}
+          <Box sx={{ width: "40%", marginX: "auto" }}>
+            <Navbar />
+            {children}
+          </Box>
         </ThemeProvider>
       </body>
     </html>

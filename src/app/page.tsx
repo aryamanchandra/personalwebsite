@@ -1,13 +1,11 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
-import Navbar from "./components/Navbar";
 import Socialbar from "./components/Socialbar";
 import localFont from "next/font/local";
 import { projectdata, workdata } from "./data";
 
 export default function Home() {
   return (
-    <Box sx={{ width: "40%", marginX: "auto" }}>
-      <Navbar />
+    <Box>
       <Box py={20} sx={{ textAlign: "center" }}>
         <Typography variant="h2" className="SFDisplay.className">
           Hi! I'm Aryaman
