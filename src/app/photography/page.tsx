@@ -1,15 +1,10 @@
 import {
   Box,
-  Button,
-  Grid,
   ImageList,
   ImageListItem,
-  Stack,
   Typography,
 } from "@mui/material";
-import { projectdata, workdata } from "../data";
-import Socialbar from "../components/Socialbar";
-import Image from "next/image";
+import Footer from "../components/Footer";
 
 const itemData = [
   {
@@ -92,17 +87,7 @@ export default function Photography() {
           </ImageListItem>
         ))}
       </ImageList>
-      <Box py={10}>
-        <Typography variant="h4">
-          Get in touch
-        </Typography>
-        <Typography color="#666666" pb={2}>
-          Got a question or a project idea that could boost your business? I'm
-          here to help. Reach out, and let's discuss how we can drive value
-          together.
-        </Typography>
-        <Socialbar />
-      </Box>
+      <Footer />
     </Box>
   );
 }
