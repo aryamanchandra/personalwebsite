@@ -13,9 +13,9 @@ export default function Footer() {
   return (
     <Box py={10}>
       <Typography variant="h4">Get in touch</Typography>
-      <Typography color="#666666" pb={2}>
-        Got a question or a project idea that could boost your business? I'm
-        here to help. Reach out, and let's discuss how we can drive value
+      <Typography color="#666666" pb={3}>
+        Got a question or a project idea that could boost your business? Im
+        here to help. Reach out, and lets discuss how we can drive value
         together.
       </Typography>
       <Socialbar />

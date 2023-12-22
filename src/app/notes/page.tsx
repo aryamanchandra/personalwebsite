@@ -1,24 +1,28 @@
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
-import { projectdata, workdata } from "../data";
+import { notesdata } from "../data";
 import Socialbar from "../components/Socialbar";
+import Footer from "../components/Footer";
 
 export default function Notes() {
   return (
     <Box>
-      <Typography variant="h4" pt={15}>
-        Work Experience
+      <Typography variant="h2" py={5}>
+        Notes
       </Typography>
-      {workdata &&
-        workdata.map((element, index) => (
+      {notesdata &&
+        notesdata.map((element, index) => (
           <Box mt={3} p={3} sx={{ border: "1px solid #1c1c1c" }} key={index}>
-            <Typography>
-              {element.title}, {element.company}
-            </Typography>
+            <Typography variant="h6">{element.title}</Typography>
             <Typography color="primary.light">{element.date}</Typography>
-            <Typography color="#666666">{element.description}</Typography>
+            <Typography color="#666666" pb={2}>{element.description}</Typography>
+            <Button
+               sx={{ fontFamily: "__SFTEXT_CAA964", background: "#1c1c1c" }}
+            >
+              Read More
+            </Button>
           </Box>
         ))}
-        <Socialbar />
+      <Footer />
     </Box>
   );
 }
