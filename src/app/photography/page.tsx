@@ -1,25 +1,55 @@
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  ImageList,
+  ImageListItem,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { projectdata, workdata } from "../data";
 import Socialbar from "../components/Socialbar";
+import Image from "next/image";
+
+const itemData = [
+  {
+    img: "/photography/boatman-1.jpg",
+    title: "Breakfast",
+  },
+  {
+    img: "/photography/cat-1.jpg",
+    title: "Breakfast",
+  },
+  {
+    img: "/photography/cat-2.jpg",
+    title: "Breakfast",
+  },
+  {
+    img: "/photography/cat-dustbin1.jpg",
+    title: "Breakfast",
+  },
+];
 
 export default function Photography() {
   return (
     <Box>
-      <Typography variant="h4" pt={15}>
-        Work Experience
+      <Typography variant="h4" pt={5}>
+        Photography
       </Typography>
-      {workdata &&
-        workdata.map((element, index) => (
-          <Box mt={3} p={3} sx={{ border: "1px solid #1c1c1c" }} key={index}>
-            <Typography>
-              {element.title}, {element.company}
-            </Typography>
-            <Typography color="primary.light">{element.date}</Typography>
-            <Typography color="#666666">{element.description}</Typography>
-          </Box>
+      <ImageList variant="quilted" cols={3} spacing={2}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.title}>
+            <img
+              src={item.img}
+              alt={item.title}
+              // width={100}
+              // height={100}
+              loading="lazy"
+            />
+          </ImageListItem>
         ))}
-                <Socialbar />
-
+      </ImageList>
+      <Socialbar />
     </Box>
   );
 }
