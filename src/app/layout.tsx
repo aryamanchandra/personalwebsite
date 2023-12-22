@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Box, ThemeProvider, Typography } from "@mui/material";
 import {theme} from "../../style";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+
+const SFText = localFont({ src: '../../public/fonts/SF-Pro-Text-Regular.otf', variable: '--font-sftext-bold'  })
 
 export const metadata: Metadata = {
   title: "Aryaman Chandra",
@@ -23,7 +24,7 @@ export default function RootLayout({
         <title>Aryaman Chandra</title>
         <meta name="description" content="Aryaman Chandra's personal website" />
       </head>
-      <body className={inter.className}>
+      <body className={SFText.className}>
         <ThemeProvider theme={theme}>
         {children}
         </ThemeProvider>

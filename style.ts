@@ -1,6 +1,12 @@
-"use client"
+"use client";
 import { createTheme } from "@mui/material";
 import { Button, styled } from "@mui/material";
+import localFont from "next/font/local";
+
+const SFText = localFont({
+  src: "./public/fonts/SF-Pro-Text-Regular.woff",
+  variable: "--font-sftext-bold",
+});
 
 const theme = createTheme({
   palette: {
@@ -24,22 +30,16 @@ const theme = createTheme({
       main: "#007D55", //green
     },
   },
+  typography: { fontFamily: `${SFText}` },
 });
 
-const NavbarButton = styled(Button)({
-    color: "white",
-    backgroundColor: "black !important",
-    "&:hover": {
-      backgroundColor: "#1c1c1c !important",
-    },
-  });
-
-  const SocialButton = styled(Button)({
+const SocialButton = styled(Button)({
+  // backgroundColor: "#1c1c1c !important",
+  color: "#397a79",
+  fontFamily:`${SFText}`,
+  "&:hover": {
     backgroundColor: "#1c1c1c !important",
-    color:"#397a79",
-    "&:hover": {
-      backgroundColor: "#1c1c1c !important",
-    },
-  });
+  },
+});
 
-export {theme, NavbarButton, SocialButton};
+export { theme,  SocialButton };
