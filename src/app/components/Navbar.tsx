@@ -16,11 +16,14 @@ const NavbarButton = styled(Button)({
 
 export default function Navbar() {
   return (
-    <Stack direction="row" sx={{ padding: "10px" }}>
+    <Stack direction="row">
       <Link href="/">
         <NavbarButton>Aryaman Chandra</NavbarButton>
       </Link>
-      <Link sx={{ marginLeft: "auto" }}>
+      <Link href="/" sx={{ marginLeft: "auto" }}>
+        <NavbarButton>Home</NavbarButton>
+      </Link>
+      <Link href="/about" sx={{ marginLeft: "20px" }}>
         <NavbarButton>About</NavbarButton>
       </Link>
       <Link href="/photography" sx={{ marginLeft: "20px" }}>
