@@ -2,13 +2,14 @@ import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import Socialbar from "./components/Socialbar";
 import localFont from "next/font/local";
 import { projectdata, workdata } from "./data";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <Box>
       <Box py={20} sx={{ textAlign: "center" }}>
         <Typography variant="h2" className="SFDisplay.className">
-          Hi! Im Aryaman
+          Hi! I'm Aryaman
         </Typography>
         <Typography
           variant="h6"
@@ -16,12 +17,12 @@ export default function Home() {
           pb={3}
           className="SFText.className"
         >
-          Full Stack Developer, UI/UX Designer & App Developer
+          Full Stack Developer & UI/UX Designer
         </Typography>
         <Socialbar />
       </Box>
       <Box pt={5}>
-        <Typography variant="h4">Selected Projects</Typography>
+        <Typography variant="h4" pb={2}>Selected Projects</Typography>
         <Stack direction="row" flexWrap="wrap">
           {projectdata && projectdata.map((element, index) => (
             <Box key={index} pb={5} sx={{ width: "45%" }}>
@@ -53,17 +54,7 @@ export default function Home() {
           </Box>
         ))}
       </Box>
-      <Box py={15}>
-        <Typography variant="h4">
-          Get in touch
-        </Typography>
-        <Typography color="#666666" pb={2}>
-          Got a question or a project idea that could boost your business? Im
-          here to help. Reach out, and lets discuss how we can drive value
-          together.
-        </Typography>
-        <Socialbar />
-      </Box>
+      <Footer />
     </Box>
   );
 }

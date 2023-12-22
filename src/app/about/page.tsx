@@ -11,18 +11,15 @@ export default function About() {
       <Grid container spacing={3}>
         <Grid item xs={6}>
           <Typography color="#666666">
-            Im currently a Product Designer at Ramp based in New York City. I
-            most recently graduated from Cornell. Before that, I was a Product
-            Design Intern at Instagram and a Systems Designer Intern at GitHub.
-            I learned my craft by working on side projects with friends and
-            guidance from great mentors.
+            I'm a seasoned Full Stack Developer and UI/UX Designer. I learned my
+            craft by working on freelance, side projects and guidance from great
+            mentors. I started off with design and motion design then, moved on
+            to full stack web and app development. I love solving problems
+            around me with code and design.
           </Typography>
           <Typography pt={3} color="#666666">
-            In my free time, I get my hopes up for the Dallas Mavericks or
-            Cowboys winning a championship and drink sweet tea. Im currently
-            learning 3D design, reading about tech history, and logging my
-            favorite movies. Im inspired by people who seek happiness and create
-            joy for others. If that sounds like you, lets grab some chai.
+            In my free time, I experiment with interesting tech stuff and sleep.
+            If you have an interesting idea do hit me up!
           </Typography>
         </Grid>
         <Grid item xs={6}>
