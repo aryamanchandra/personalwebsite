@@ -32,11 +32,11 @@ export default function Home() {
               <Typography color="#666666" py={1}>
                 {element.description}
               </Typography>
-              <Button
+              {/* <Button
                 sx={{ fontFamily: "__SFTEXT_CAA964", background: "#1c1c1c" }}
               >
                 Case Study
-              </Button>
+              </Button> */}
             </Box>
           ))}
         </Stack>

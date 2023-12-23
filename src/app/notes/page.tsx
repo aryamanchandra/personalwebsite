@@ -9,7 +9,7 @@ export default function Notes() {
       <Typography variant="h2" py={5}>
         Notes
       </Typography>
-      {notesdata &&
+      {/* {notesdata &&
         notesdata.map((element, index) => (
           <Box mt={3} p={3} sx={{ border: "1px solid #1c1c1c" }} key={index}>
             <Typography variant="h6">{element.title}</Typography>
@@ -21,7 +21,8 @@ export default function Notes() {
               Read More
             </Button>
           </Box>
-        ))}
+        ))} */}
+        <Typography variant="h5" color="#666666">No notes as of now :D</Typography>
       <Footer />
     </Box>
   );
