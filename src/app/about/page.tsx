@@ -11,7 +11,7 @@ export default function About() {
       <Grid container spacing={3}>
         <Grid item xs={6}>
           <Typography color="#666666">
-            I'm a seasoned Full Stack Developer and UI/UX Designer. I learned my
+            I&apos;m a seasoned Full Stack Developer and UI/UX Designer. I learned my
             craft by working on freelance, side projects and guidance from great
             mentors. I started off with design and motion design then, moved on
             to full stack web and app development. I love solving problems
