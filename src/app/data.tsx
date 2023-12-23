@@ -1,38 +1,45 @@
 const projectdata = [
   {
     title: "Monumenta",
+    stack:"App Dev | Full Stack Dev | UI/UX",
     description:
-      "Polychain Monsters offers animated  NFTs through digital booster packs, each with unique animations and rarity. With over 2.7 million packs opened, a hit among collectors and gamers in Web3.",
+      "Monumenta lets you discover a treasure trove of monument details at your fingertips along with providing you with numerous features and sleek UI.",
   },
   {
     title: "Chat It",
+    stack:"Full Stack Dev | UI/UX",
     description:
-      "Polychain Monsters offers animated  NFTs through digital booster packs, each with unique animations and rarity. With over 2.7 million packs opened, a hit among collectors and gamers in Web3.",
+      "A messaging platform where you can initiate conversations with others by simply sharing a link. Letting you connect with the someone seamlessly and securely.",
   },
   {
     title: "Unmask",
+    stack:"Full Stack Dev | ML | UI/UX",
     description:
-      "Polychain Monsters offers animated  NFTs through digital booster packs, each with unique animations and rarity. With over 2.7 million packs opened, a hit among collectors and gamers in Web3.",
+      "A surveillance app for taking input from CCTV and providing various analysis like mask detection, face recognition, crowd detection etc.",
   },
   {
     title: "Line",
+    stack:"Full Stack Dev | ML | App Dev",
     description:
-      "Polychain Monsters offers animated  NFTs through digital booster packs, each with unique animations and rarity. With over 2.7 million packs opened, a hit among collectors and gamers in Web3.",
+      "Line is a road safety app that does behavior tagging, lane detection, distraction detachment to prevent road collisions and inefficient driving.",
   },
   {
     title: "Shuttl",
+    stack:"Full Stack Dev | App Dev",
     description:
-      "Polychain Monsters offers animated  NFTs through digital booster packs, each with unique animations and rarity. With over 2.7 million packs opened, a hit among collectors and gamers in Web3.",
+      "A dedicated shuttle app for our college providing students with real-time location updates, ensuring seamless access to campus infrastructure and promoting efficient transportation within the campus.",
   },
   {
     title: "Supplify",
+    stack:"Full Stack Dev",
     description:
-      "Polychain Monsters offers animated  NFTs through digital booster packs, each with unique animations and rarity. With over 2.7 million packs opened, a hit among collectors and gamers in Web3.",
+      "A blockchain-based supply chain to enhance efficiency by minimizing paperwork, streamlining logistics, and fostering transparency and securing transactions.",
   },
   {
     title: "Text Sentiment Analysis",
+    stack:"ML | Full Stack Dev",
     description:
-      "Polychain Monsters offers animated  NFTs through digital booster packs, each with unique animations and rarity. With over 2.7 million packs opened, a hit among collectors and gamers in Web3.",
+      "A deep learning model for text sentiment analysis to enable accurate and nuanced understanding of emotions expressed in text for analysing customer feedback to social media monitoring.",
   },
 ];
 

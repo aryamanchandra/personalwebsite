@@ -23,11 +23,12 @@ export default function Home() {
       </Box>
       <Box pt={5}>
         <Typography variant="h4" pb={2}>Selected Projects</Typography>
-        <Stack direction="row" flexWrap="wrap">
+        <Stack direction="row" flexWrap="wrap" gap={2}>
           {projectdata && projectdata.map((element, index) => (
             <Box key={index} pb={5} sx={{ width: "45%" }}>
               {/* <Typography>Image will come here</Typography> */}
               <Typography variant="h6">{element.title}</Typography>
+              <Typography color="primary.light">{element.stack}</Typography>
               <Typography color="#666666" py={1}>
                 {element.description}
               </Typography>
