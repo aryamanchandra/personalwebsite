@@ -35,12 +35,6 @@ const projectdata = [
     description:
       "A blockchain-based supply chain to enhance efficiency by minimizing paperwork, streamlining logistics, and fostering transparency and securing transactions.",
   },
-  {
-    title: "Text Sentiment Analysis",
-    stack:"ML | Full Stack Dev",
-    description:
-      "A deep learning model for text sentiment analysis to enable accurate and nuanced understanding of emotions expressed in text for analysing customer feedback to social media monitoring.",
-  },
 ];
 
 const workdata = [
