@@ -1,8 +1,19 @@
 "use client";
 
-import { Box, Link, Stack } from "@mui/material";
-import Typography from "@mui/material/Typography";
+import {
+  Box,
+  Link,
+  Stack,
+  Typography,
+  Menu,
+  MenuItem,
+  IconButton,
+  useMediaQuery,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
 import { Button, styled } from "@mui/material";
+import { theme } from "../../../style";
 
 const NavbarButton = styled(Button)({
   color: "white",
@@ -15,21 +26,39 @@ const NavbarButton = styled(Button)({
 });
 
 export default function Navbar() {
+  const matchDownMd = useMediaQuery(theme.breakpoints.down('xs'))
+  const [visible, setVisible] = useState(matchDownMd?false : true);
+
+  const handleMenuOpen = () => {
+    setVisible(!visible);
+  };
+
+
   return (
-    <Stack direction="row">
+    <Stack direction={{sm:"row", xs:"column"}}>
+      <Stack direction="row">
       <Link href="/">
         <NavbarButton>Aryaman Chandra</NavbarButton>
       </Link>
-      <Link href="/" sx={{ marginLeft: "auto" }}>
+
+      <IconButton
+        onClick={handleMenuOpen}
+        color="inherit"
+        sx={{ display: { xs: "block", sm: "none" }, marginLeft: "auto" }}
+      >
+        <MenuIcon />
+      </IconButton>
+      </Stack>
+      <Link href="/" sx={{ marginLeft: {sm:"auto", xs:"none"}, display: visible ? "block":"none" }}>
         <NavbarButton>Home</NavbarButton>
       </Link>
-      <Link href="/about" sx={{ marginLeft: "20px" }}>
+      <Link href="/about" sx={{ marginLeft: {sm:"20px", xs:"none"}, display: visible ? "block":"none"  }}>
         <NavbarButton>About</NavbarButton>
       </Link>
-      <Link href="/photography" sx={{ marginLeft: "20px" }}>
+      <Link href="/photography" sx={{ marginLeft: {sm:"20px", xs:"none"}, display: visible ? "block":"none"  }}>
         <NavbarButton>Photography</NavbarButton>
       </Link>
-      <Link href="/notes" sx={{ marginLeft: "20px" }}>
+      <Link href="/notes" sx={{ marginLeft: {sm:"20px", xs:"none"}, display: visible ? "block":"none"  }}>
         <NavbarButton>Notes</NavbarButton>
       </Link>
     </Stack>
