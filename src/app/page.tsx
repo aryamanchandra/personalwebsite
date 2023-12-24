@@ -25,7 +25,7 @@ export default function Home() {
         <Typography variant="h4" pb={2}>Selected Projects</Typography>
         <Stack direction="row" flexWrap="wrap" gap={2}>
           {projectdata && projectdata.map((element, index) => (
-            <Box key={index} pb={5} sx={{ width: "45%" }}>
+            <Box key={index} pb={5} sx={{ width: { xs: "100%", sm: "48%" } }}>
               {/* <Typography>Image will come here</Typography> */}
               <Typography variant="h6">{element.title}</Typography>
               <Typography color="primary.light">{element.stack}</Typography>
@@ -46,7 +46,7 @@ export default function Home() {
           Work Experience
         </Typography>
         {workdata && workdata.map((element, index) => (
-          <Box mt={3} p={3} sx={{ border: "1px solid #1c1c1c" }} key={index}>
+          <Box mt={3} p={3} sx={{ border: "2px solid #1c1c1c" }} key={index}>
             <Typography>
               {element.title}, {element.company}
             </Typography>
