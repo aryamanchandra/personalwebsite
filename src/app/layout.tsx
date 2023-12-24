@@ -26,6 +26,7 @@ export default function RootLayout({
       <head>
         <title>Aryaman Chandra</title>
         <meta name="description" content="Aryaman Chandra's personal website" />
+        <link rel="icon" href="../../public/ac-icon.png" sizes="any" />
       </head>
       <body className={SFText.className}>
         <ThemeProvider theme={theme}>
