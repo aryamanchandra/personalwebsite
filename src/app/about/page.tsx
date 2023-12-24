@@ -8,8 +8,8 @@ export default function About() {
       <Typography variant="h2" py={5}>
         About me
       </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
+      <Grid container spacing={1} flexDirection={{ xs: 'column-reverse', sm: 'row', md: 'row' }}>
+        <Grid item xs={12} sm={6} md={6}>
           <Typography color="#666666">
             I&apos;m a seasoned Full Stack Developer and UI/UX Designer. I learned my
             craft by working on freelance, side projects and guidance from great
@@ -22,7 +22,7 @@ export default function About() {
             If you have an interesting idea do hit me up!
           </Typography>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6} md={6} textAlign="center">
           <Image
             src="/profile.webp"
             alt="profile"

@@ -34,7 +34,7 @@ export default function RootLayout({
               width: "100%",
               maxWidth: "50rem",
               marginX: "auto",
-              padding: "20px",
+              padding: "30px",
               '@media (max-width: 600px)': {
                 maxWidth: "100%", 
               },
