@@ -27,9 +27,11 @@ const NavbarButton = styled(Button)({
 
 export default function Navbar() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("xs"));
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log("matches: "+matches)
   useEffect(() => {
     const check = matches ? false : true;
+    console.log("check: "+ check)
     setVisible(check)
   },[matches]);
 
