@@ -27,7 +27,7 @@ const BehanceButton = styled(Button)({
 export default function Photography() {
   return (
     <Box>
-      <Typography variant="h2" py={5}>
+      <Typography variant="h2" py={5} sx={{fontSize: { xs: "3rem", md: "4rem" }}}>
         Photography
       </Typography>
       <ImageList cols={2}>

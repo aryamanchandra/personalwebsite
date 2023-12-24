@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function About() {
   return (
     <Box>
-      <Typography variant="h2" py={5}>
+      <Typography variant="h2" py={5} sx={{fontSize: { xs: "3rem", md: "4rem" }}}>
         About me
       </Typography>
       <Grid container spacing={1} flexDirection={{ xs: 'column-reverse', sm: 'row', md: 'row' }}>

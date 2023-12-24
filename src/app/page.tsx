@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Box>
       <Box py={20} sx={{ textAlign: "center" }}>
-        <Typography variant="h2" className="SFDisplay.className">
+        <Typography variant="h2" className="SFDisplay.className" sx={{fontSize: { xs: "3rem", md: "4rem" }}}>
           Hi! I&apos;m Aryaman
         </Typography>
         <Typography
