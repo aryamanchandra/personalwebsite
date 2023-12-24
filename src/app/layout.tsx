@@ -29,7 +29,17 @@ export default function RootLayout({
       </head>
       <body className={SFText.className}>
         <ThemeProvider theme={theme}>
-          <Box sx={{ width: "40%", marginX: "auto", padding:"10px" }}>
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: "50rem",
+              marginX: "auto",
+              padding: "20px",
+              '@media (max-width: 600px)': {
+                maxWidth: "100%", 
+              },
+            }}
+          >
             <Navbar />
             {children}
           </Box>

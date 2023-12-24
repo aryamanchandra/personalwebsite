@@ -30,7 +30,7 @@ export default function Photography() {
       <Typography variant="h2" py={5}>
         Photography
       </Typography>
-      <ImageList cols={3}>
+      <ImageList cols={2}>
         {photographyimage.map((item) => (
           <ImageListItem key={item.title}>
             <img src={item.img} alt={item.title} loading="lazy" />
