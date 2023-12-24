@@ -1,3 +1,10 @@
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+// import { FaBehance } from "react-icons/fa";
+// import { FaDribbble } from "react-icons/fa";
+
 const projectdata = [
   {
     title: "Monumenta",
@@ -150,4 +157,31 @@ const photographyimage = [
   },
 ];
 
-export { projectdata, workdata, photographyimage, notesdata };
+const socialdata = [
+  {
+    name: GitHubIcon,
+    link: "https://github.com/aryamanchandra"
+  },
+  {
+    name: LinkedInIcon,
+    link: "https://www.linkedin.com/in/aryamanchandra/"
+  },
+  {
+    name: YouTubeIcon,
+    link: "https://www.youtube.com/channel/UCoGX05bLREPTR2s9VTHEbNw"
+  },
+  {
+    name: EmailIcon,
+    link: "mailto:aryamanow@gmail.com"
+  },
+  // {
+  //   name: FaDribbble,
+  //   link: "https://dribbble.com/aryamanchandra"
+  // },
+  // {
+  //   name: FaBehance,
+  //   link: "https://www.behance.net/aryamanchandra"
+  // },
+]
+
+export { projectdata, workdata, photographyimage, notesdata, socialdata };

@@ -1,28 +1,26 @@
 "use client"
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import { Box, Button } from "@mui/material";
+import { Box, Button, Link } from "@mui/material";
 import { SocialButton } from "../../../style";
+import { socialdata } from "../data";
 
-function SocialIcons({IconComponent, onClick}: { IconComponent: React.ComponentType; onClick: () => void }) {
+function SocialIcons({IconComponent, onClick}: { IconComponent: React.ComponentType; onClick: string }) {
     return (
-      <SocialButton onClick={onClick} sx={{paddingLeft:"0px",paddingRight:"0px", marginRight:"10px"}}>
+      <SocialButton sx={{paddingLeft:"0px",paddingRight:"0px", marginRight:"10px"}}>
+        {/* <Link href={onClick} target="_blank"> */}
         <IconComponent/>
+        {/* </Link> */}
       </SocialButton>
     );
   }
 
 export default function Socialbar() {
-  const socialicons = [GitHubIcon,LinkedInIcon, YouTubeIcon];
   return (
     <Box>
-      {socialicons.map((Element, index) => (
+      {socialdata.map((element, index) => (
         <SocialIcons
           key={index}
-          IconComponent={Element}
-          onClick={() => console.log('Button clicked')}
+          IconComponent={element.name}
+          onClick={element.link}
         />
       ))}
     </Box>
