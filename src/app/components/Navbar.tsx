@@ -26,13 +26,13 @@ const NavbarButton = styled(Button)({
 });
 
 export default function Navbar() {
-  const matchDownMd = useMediaQuery(theme.breakpoints.down('xs'))
-  const [visible, setVisible] = useState(matchDownMd?false : true);
+  const matches = useMediaQuery(theme.breakpoints.up('xs'));
+  const check = matches?false:true
+  const [visible, setVisible] = useState(check);
 
   const handleMenuOpen = () => {
     setVisible(!visible);
   };
-
 
   return (
     <Stack direction={{sm:"row", xs:"column"}}>
