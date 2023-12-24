@@ -12,7 +12,7 @@ import {
   useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, styled } from "@mui/material";
 
 const NavbarButton = styled(Button)({
@@ -27,39 +27,67 @@ const NavbarButton = styled(Button)({
 
 export default function Navbar() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('xs'));
-  const check = matches?false:true
-  const [visible, setVisible] = useState(check);
+  const matches = useMediaQuery(theme.breakpoints.up("xs"));
+  useEffect(() => {
+    const check = matches ? false : true;
+    setVisible(check)
+  },[matches]);
+
+  const [visible, setVisible] = useState(true);
 
   const handleMenuOpen = () => {
     setVisible(!visible);
   };
 
   return (
-    <Stack direction={{sm:"row", xs:"column"}}>
+    <Stack direction={{ sm: "row", xs: "column" }}>
       <Stack direction="row">
-      <Link href="/">
-        <NavbarButton>Aryaman Chandra</NavbarButton>
-      </Link>
+        <Link href="/">
+          <NavbarButton>Aryaman Chandra</NavbarButton>
+        </Link>
 
-      <IconButton
-        onClick={handleMenuOpen}
-        color="inherit"
-        sx={{ display: { xs: "block", sm: "none" }, marginLeft: "auto" }}
-      >
-        <MenuIcon />
-      </IconButton>
+        <IconButton
+          onClick={handleMenuOpen}
+          color="inherit"
+          sx={{ display: { xs: "block", sm: "none" }, marginLeft: "auto" }}
+        >
+          <MenuIcon />
+        </IconButton>
       </Stack>
-      <Link href="/" sx={{ marginLeft: {sm:"auto", xs:"none"}, display: visible ? "block":"none" }}>
+      <Link
+        href="/"
+        sx={{
+          marginLeft: { sm: "auto", xs: "none" },
+          display: visible ? "block" : "none",
+        }}
+      >
         <NavbarButton>Home</NavbarButton>
       </Link>
-      <Link href="/about" sx={{ marginLeft: {sm:"20px", xs:"none"}, display: visible ? "block":"none"  }}>
+      <Link
+        href="/about"
+        sx={{
+          marginLeft: { sm: "20px", xs: "none" },
+          display: visible ? "block" : "none",
+        }}
+      >
         <NavbarButton>About</NavbarButton>
       </Link>
-      <Link href="/photography" sx={{ marginLeft: {sm:"20px", xs:"none"}, display: visible ? "block":"none"  }}>
+      <Link
+        href="/photography"
+        sx={{
+          marginLeft: { sm: "20px", xs: "none" },
+          display: visible ? "block" : "none",
+        }}
+      >
         <NavbarButton>Photography</NavbarButton>
       </Link>
-      <Link href="/notes" sx={{ marginLeft: {sm:"20px", xs:"none"}, display: visible ? "block":"none"  }}>
+      <Link
+        href="/notes"
+        sx={{
+          marginLeft: { sm: "20px", xs: "none" },
+          display: visible ? "block" : "none",
+        }}
+      >
         <NavbarButton>Notes</NavbarButton>
       </Link>
     </Stack>
