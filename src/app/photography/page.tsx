@@ -32,8 +32,8 @@ export default function Photography() {
       </Typography>
       <ImageList cols={2}>
         {photographyimage.map((item) => (
-          <ImageListItem key={item.title}>
-            <img src={item.img} alt={item.title} loading="lazy" />
+          <ImageListItem key={item.img}>
+            <img src={item.img} alt={item.img} loading="lazy" />
           </ImageListItem>
         ))}
       </ImageList>
