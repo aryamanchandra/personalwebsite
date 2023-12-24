@@ -9,11 +9,11 @@ import {
   MenuItem,
   IconButton,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { Button, styled } from "@mui/material";
-import { theme } from "../../../style";
 
 const NavbarButton = styled(Button)({
   color: "white",
@@ -26,6 +26,7 @@ const NavbarButton = styled(Button)({
 });
 
 export default function Navbar() {
+  const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('xs'));
   const check = matches?false:true
   const [visible, setVisible] = useState(check);
