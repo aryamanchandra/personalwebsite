@@ -19,11 +19,12 @@ export default function Notes() {
     <Box>
       <Typography
         variant="h2"
-        py={5}
+        pt={5}
         sx={{ fontSize: { xs: "3rem", md: "4rem" } }}
       >
         Notes
       </Typography>
+      <Typography color="#666666" variant="h6" pb={5}>Stuff I learnt while coding through experimenting and searching tons of resources.</Typography>
       {notesdata ? (
         notesdata.map((element, index) => (
           <Box mt={3} p={3} sx={{ border: "1px solid #1c1c1c" }} key={index}>

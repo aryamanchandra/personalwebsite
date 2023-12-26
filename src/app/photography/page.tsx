@@ -27,9 +27,10 @@ const BehanceButton = styled(Button)({
 export default function Photography() {
   return (
     <Box>
-      <Typography variant="h2" py={5} sx={{fontSize: { xs: "3rem", md: "4rem" }}}>
+      <Typography variant="h2" pt={5} sx={{fontSize: { xs: "3rem", md: "4rem" }}}>
         Photography
       </Typography>
+      <Typography color="#666666" variant="h6" pb={5}>Friendly Neighbourhood Photographer</Typography>
       <ImageList cols={2}>
         {photographyimage.map((item) => (
           <ImageListItem key={item.img}>
