@@ -65,13 +65,13 @@ export default function Post() {
           </Typography>
           <Typography color="primary.light">{querydata.date}</Typography>
           <Typography color="#666666" py={3}>{querydata.hero}</Typography>
-          <Box p={2} sx={{ background: "#1c1c1c" }}>
+          <Box p={2}>
             <pre className="language-javascript">
               <code>{querydata.code}</code>
             </pre>
           </Box>
           <Typography color="#666666" py={3}>{querydata.subtext}</Typography>
-          <Box p={2} sx={{ background: "#1c1c1c" }}>
+          <Box p={2}>
             <pre className="language-javascript">
               <code>{querydata.code2}</code>
             </pre>
