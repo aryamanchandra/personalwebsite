@@ -5,7 +5,7 @@ import Socialbar from "../components/Socialbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useData } from '../components/context';
+import { useData } from "../components/context";
 
 export default function Notes() {
   const { setData } = useData();
@@ -24,7 +24,7 @@ export default function Notes() {
       >
         Notes
       </Typography>
-      {notesdata &&
+      {notesdata ? (
         notesdata.map((element, index) => (
           <Box mt={3} p={3} sx={{ border: "1px solid #1c1c1c" }} key={index}>
             <Typography variant="h6">{element.title}</Typography>
@@ -36,18 +36,15 @@ export default function Notes() {
               sx={{ fontFamily: "__SFTEXT_CAA964", background: "#111111" }}
               onClick={() => handleReadMoreClick(element.title, element)}
             >
-              {/* <Link
-                href={{
-                  pathname: `notes/${element.title}`,
-                  query: { title: 'john', age: '30' }
-                }}
-              > */}
               Read More
-              {/* </Link> */}
             </Button>
           </Box>
-        ))}
-      {/* <Typography variant="h5" color="#666666">No notes as of now :D</Typography> */}
+        ))
+      ) : (
+        <Typography variant="h5" color="#666666">
+          No notes as of now :D
+        </Typography>
+      )}
       <Footer />
     </Box>
   );
