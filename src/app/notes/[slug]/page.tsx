@@ -3,7 +3,7 @@ import { Box, Button, Typography, styled } from "@mui/material";
 import { useData } from "../../components/context";
 import { useEffect, useState } from "react";
 import Prism from "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
+import "../[slug]/prism-tomorrow.css";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import { useRouter } from "next/navigation";
 import Footer from "@/app/components/Footer";
@@ -74,8 +74,8 @@ export default function Post() {
           </Box>
           <Typography color="#666666" py={3}>{querydata.subtext}</Typography>
           <Box p={2}>
-            <pre className="language-javascript">
-              <code>{querydata.code2}</code>
+            <pre className="language-javascript" style={{backgroundColor:"#110000 !important"}}>
+              <code style={{backgroundColor:"#110000 !important"}}>{querydata.code2}</code>
             </pre>
           </Box>
           <Typography color="#666666" py={3}>{querydata.othertext}</Typography>
