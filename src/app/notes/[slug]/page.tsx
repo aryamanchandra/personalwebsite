@@ -1,9 +1,12 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography, styled } from "@mui/material";
 import { useData } from "../../components/context";
 import { useEffect, useState } from "react";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
+import ArrowBack from "@mui/icons-material/ArrowBack";
+import { useRouter } from "next/navigation";
+import Footer from "@/app/components/Footer";
 
 export default function Post() {
   const { data } = useData();
@@ -37,31 +40,48 @@ export default function Post() {
   useEffect(() => {
     Prism.highlightAll();
   }, [querydata]);
+
+  const router = useRouter(); 
+  const handleBack = () => {
+    router.push("/notes");
+  }
+
+  const BackButton = styled(Button)({
+    background:"#111111", 
+    borderRadius:"30px",
+    fontFamily: "__SFTEXT_CAA964", 
+    paddingRight:"15px",
+    paddingLeft:"15px",
+    textTransform: "capitalize",
+  }) 
   
   return (
-    <Box>
+    <Box pt={6}>
+      <BackButton onClick={handleBack} startIcon={<ArrowBack />}>Go Back </BackButton>
       {querydata ? (
         <>
-          <Typography variant="h4" pt={10}>
+          <Typography variant="h4" pt={4}>
             {querydata.title}
           </Typography>
           <Typography color="primary.light">{querydata.date}</Typography>
           <Typography color="#666666" py={3}>{querydata.hero}</Typography>
-          <Box p={2} sx={{ background: "#1c1c1c" }}>
+          <Box p={2} sx={{ background: "#111111" }}>
             <pre className="language-javascript">
               <code>{querydata.code}</code>
             </pre>
           </Box>
           <Typography color="#666666" py={3}>{querydata.subtext}</Typography>
-          <Box p={2} sx={{ background: "#1c1c1c" }}>
+          <Box p={2} sx={{ background: "#111111" }}>
             <pre className="language-javascript">
               <code>{querydata.code2}</code>
             </pre>
           </Box>
+          <Typography color="#666666" py={3}>{querydata.othertext}</Typography>
         </>
       ) : (
         ""
       )}
+      <Footer />
     </Box>
   );
 }

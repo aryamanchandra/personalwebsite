@@ -132,6 +132,7 @@ const notesdata = [
       "const theme = createTheme({\n" +
       "  typography: { fontFamily: `${SFText}`},\n" +
       "});\n",
+    othertext:"Other issues you would face is when you use Buttons and similar stuff it would show some random fonts. You will have to make there font family same as the className that shows up in element. The easiest way to get this is do Ctrl+I and click the element that has your font(SFText) applied to it. Then, under the font family copy it. It would look something like __SFTEXT_CAA964. Now use this as a font family for your button."
   },
 ];
 
