@@ -1,7 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 // import { FaBehance } from "react-icons/fa";
 // import { FaDribbble } from "react-icons/fa";
 
@@ -84,28 +84,54 @@ const workdata = [
 
 const notesdata = [
   {
-    title: "How to add local fonts in NextJS",
-    date: "23 December 2023",
-    description:
-      "Co-Founder of Polychain Monsters with focus on Product, Design and Community Development in the Web3 space, utilizing transparency, user involvement and a user-centric approach to drive successful product development.",
-  },
-  {
-    title: "How to add local fonts in NextJS",
-    date: "23 December 2023",
-    description:
-      "Co-Founder of Polychain Monsters with focus on Product, Design and Community Development in the Web3 space, utilizing transparency, user involvement and a user-centric approach to drive successful product development.",
-  },
-  {
-    title: "How to add local fonts in NextJS",
-    date: "23 December 2023",
-    description:
-      "Co-Founder of Polychain Monsters with focus on Product, Design and Community Development in the Web3 space, utilizing transparency, user involvement and a user-centric approach to drive successful product development.",
-  },
-  {
-    title: "How to add local fonts in NextJS",
-    date: "23 December 2023",
-    description:
-      "Co-Founder of Polychain Monsters with focus on Product, Design and Community Development in the Web3 space, utilizing transparency, user involvement and a user-centric approach to drive successful product development.",
+    title: "Adding local fonts to NextJS + MUI app",
+    date: "25 December 2023",
+    description: "Adding custom fonts to NextJS site which uses MUI.",
+    hero: "Adding local fonts to NextJS apps is pain when you have MUI because MUI overrides the NextJS defaults with its own. Here is the solution I found out to this issue. First off, place all your fonts in public/fonts (I have used San Francisco font here). Then import next/font in your src/app/layout.tsx and make a const the way shown below. Then use the const(SFText for me) in the className of body tag in app/layout.tsx ",
+    code:
+      '//layout.tsx \n'+
+      'import { ThemeProvider } from "@mui/material";\n'+
+      'import localFont from "next/font/local\n\n";' +
+      '"const SFText = localFont({\n"' +
+      '  src: "./public/fonts/SF-Pro-Text-Regular.woff",\n' +
+      '  variable: "--font-sftext-bold",\n' +
+      "});\n\n" +
+      "export const metadata: Metadata = {\n" +
+      '  title: "Lorem Ipsum",\n' +
+      '  description: "Lorem ipsum dolo sit",\n' +
+      "};\n" +
+      "\n" +
+      "export default function RootLayout({\n" +
+      "  children,\n" +
+      "}: {\n" +
+      "  children: React.ReactNode;\n" +
+      "}) {\n" +
+      "  return (\n" +
+      '    <html lang="en">\n' +
+      "      <head>\n" +
+      "        <title>Lorem Ipsum</title>\n" +
+      "      </head>\n" +
+      "      <body className={SFText.className}>\n" +
+      "        <ThemeProvider theme={theme}>\n" +
+      "          {children}\n" +
+      "        </ThemeProvider>\n" +
+      "      </body>\n" +
+      "    </html>\n" +
+      "  );\n" +
+      "}\n",
+    subtext:
+      "After this we need to override the defaults of MUI as it uses Roboto etc. Import next/font/local and create the same const(SFText) like we did previously and place it in style.ts(Your custom style theme file). Then use createTheme() and mention a field for typography as shown below. The final step is just placing ThemeProvider around your layout.tsx like shown above.",
+    code2:
+      "//style.ts\n" +
+      'import { createTheme } from "@mui/material";\n' +
+      'import localFont from "next/font/local";\n\n' +
+      "const SFText = localFont({\n" +
+      '  src: "./public/fonts/SF-Pro-Text-Regular.woff",\n' +
+      '  variable: "--font-sftext-bold",\n' +
+      "});\n\n" +
+      "const theme = createTheme({\n" +
+      "  typography: { fontFamily: `${SFText}`},\n" +
+      "});\n",
   },
 ];
 
@@ -160,19 +186,19 @@ const photographyimage = [
 const socialdata = [
   {
     name: GitHubIcon,
-    link: "https://github.com/aryamanchandra"
+    link: "https://github.com/aryamanchandra",
   },
   {
     name: LinkedInIcon,
-    link: "https://www.linkedin.com/in/aryamanchandra/"
+    link: "https://www.linkedin.com/in/aryamanchandra/",
   },
   {
     name: YouTubeIcon,
-    link: "https://www.youtube.com/channel/UCoGX05bLREPTR2s9VTHEbNw"
+    link: "https://www.youtube.com/channel/UCoGX05bLREPTR2s9VTHEbNw",
   },
   {
     name: EmailIcon,
-    link: "mailto:aryamanow@gmail.com"
+    link: "mailto:aryamanow@gmail.com",
   },
   // {
   //   name: FaDribbble,
@@ -182,6 +208,6 @@ const socialdata = [
   //   name: FaBehance,
   //   link: "https://www.behance.net/aryamanchandra"
   // },
-]
+];
 
 export { projectdata, workdata, photographyimage, notesdata, socialdata };

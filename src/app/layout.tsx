@@ -4,6 +4,7 @@ import { Box, ThemeProvider, Typography } from "@mui/material";
 import { theme } from "../../style";
 import localFont from "next/font/local";
 import Navbar from "./components/Navbar";
+import { DataProvider } from "./components/context";
 
 const SFText = localFont({
   src: "../../public/fonts/SF-Pro-Text-Regular.otf",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <link rel="icon" href="../../public/ac-icon.png" sizes="any" />
       </head>
       <body className={SFText.className}>
+        <DataProvider>
         <ThemeProvider theme={theme}>
           <Box
             sx={{
@@ -45,6 +47,7 @@ export default function RootLayout({
             {children}
           </Box>
         </ThemeProvider>
+        </DataProvider>
       </body>
     </html>
   );
