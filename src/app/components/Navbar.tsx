@@ -21,7 +21,7 @@ const NavbarButton = styled(Button)({
   fontFamily: "__SFTEXT_CAA964",
   textTransform: "capitalize",
   "&:hover": {
-    backgroundColor: "#1c1c1c !important",
+    backgroundColor: "#111111 !important",
   },
 });
 

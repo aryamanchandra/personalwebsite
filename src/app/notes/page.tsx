@@ -33,7 +33,7 @@ export default function Notes() {
               {element.description}
             </Typography>
             <Button
-              sx={{ fontFamily: "__SFTEXT_CAA964", background: "#1c1c1c" }}
+              sx={{ fontFamily: "__SFTEXT_CAA964", background: "#111111" }}
               onClick={() => handleReadMoreClick(element.title, element)}
             >
               {/* <Link
