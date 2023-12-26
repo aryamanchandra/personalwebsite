@@ -91,8 +91,8 @@ const notesdata = [
     code:
       '//layout.tsx \n'+
       'import { ThemeProvider } from "@mui/material";\n'+
-      'import localFont from "next/font/local\n\n";' +
-      '"const SFText = localFont({\n"' +
+      'import localFont from "next/font/local";\n\n' +
+      'const SFText = localFont({\n' +
       '  src: "./public/fonts/SF-Pro-Text-Regular.woff",\n' +
       '  variable: "--font-sftext-bold",\n' +
       "});\n\n" +
@@ -122,7 +122,7 @@ const notesdata = [
     subtext:
       "After this we need to override the defaults of MUI as it uses Roboto etc. Import next/font/local and create the same const(SFText) like we did previously and place it in style.ts(Your custom style theme file). Then use createTheme() and mention a field for typography as shown below. The final step is just placing ThemeProvider around your layout.tsx like shown above.",
     code2:
-      "//style.ts\n" +
+      "//style.ts \n" +
       'import { createTheme } from "@mui/material";\n' +
       'import localFont from "next/font/local";\n\n' +
       "const SFText = localFont({\n" +

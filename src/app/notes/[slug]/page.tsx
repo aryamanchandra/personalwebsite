@@ -15,6 +15,8 @@ export default function Post() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       require("prismjs/components/prism-javascript");
+      require("prismjs/components/prism-markup");
+      require("prismjs/components/prism-css");
       require("prismjs/components/prism-jsx");
       Prism.highlightAll();
     }
