@@ -14,7 +14,7 @@ const SFText = localFont({
 export const metadata: Metadata = {
   title: "Aryaman Chandra",
   description:
-    "I am Aryaman Chandra. I am an experienced full stack developer with love for design.",
+    "Aryaman Chandra is an experienced Full Stack Developer & UI/UX Designer.",
 };
 
 export default function RootLayout({
