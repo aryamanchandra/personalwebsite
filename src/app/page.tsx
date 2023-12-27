@@ -1,6 +1,5 @@
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Socialbar from "./components/Socialbar";
-import localFont from "next/font/local";
 import { projectdata, workdata } from "./data";
 import Footer from "./components/Footer";
 

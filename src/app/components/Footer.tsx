@@ -1,12 +1,7 @@
 import Socialbar from "./Socialbar";
 import {
   Box,
-  Button,
-  Grid,
-  ImageList,
-  ImageListItem,
   Link,
-  Stack,
   Typography,
 } from "@mui/material";
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Box, ThemeProvider, Typography } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
 import { theme } from "../../style";
 import localFont from "next/font/local";
 import Navbar from "./components/Navbar";

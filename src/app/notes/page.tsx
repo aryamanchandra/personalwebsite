@@ -1,9 +1,7 @@
 "use client";
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { notesdata } from "../data";
-import Socialbar from "../components/Socialbar";
 import Footer from "../components/Footer";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useData } from "../components/context";
 
