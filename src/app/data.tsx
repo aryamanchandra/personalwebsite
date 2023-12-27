@@ -84,6 +84,16 @@ const workdata = [
 
 const notesdata = [
   {
+    title:"Local images in NextJS",
+    date:"28 December 2023",
+    description:"Loading local images in Next JS app",
+    hero:"For loading images in Nextjs, you need to mention it as a relative path to your public repository. So, here I have put images in public/photo/image.jpg. Now, to use this image we import the next/image and use the image tag as below. The catch here is src will be photo/image.jpg (relative path with respect to public folder)",
+    code:'import Image from "next/image"\n'+
+    '<Image src="/photo/image.jpg" alt="some image" width={100} height={100} />',
+    subtext:"In the Image tag imported from next/image it is necessary to mention height and width as integers and you can't mention it as percentages which was a pain to make it responsive. So, a work around that I did was use <img> tag instead it might give you a yellow highlight suggesting to use Image from Next JS but it works so you can ignore the suggestion. You can even add loading='lazy' for better performance of page",
+    code2:'<img src="/photo/image.jpg" alt="some image" loading="lazy" />',
+  },
+  {
     title: "Adding local fonts to NextJS + MUI app",
     date: "25 December 2023",
     description: "Adding custom fonts to NextJS site which uses MUI.",
