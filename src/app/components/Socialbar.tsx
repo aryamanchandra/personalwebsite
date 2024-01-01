@@ -6,7 +6,7 @@ import { socialdata } from "../data";
 function SocialIcons({IconComponent, onClick}: { IconComponent: React.ComponentType; onClick: string }) {
     return (
       <SocialButton sx={{paddingLeft:"0px",paddingRight:"0px", marginRight:"10px"}}>
-        <Link href={onClick} target="_blank">
+        <Link href={onClick} target="_blank" color="primary.light">
         <IconComponent/>
         </Link>
       </SocialButton>
