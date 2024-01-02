@@ -52,13 +52,13 @@ const workdata = [
     description:
       "Built a full stack digital notarization application. Worked on analysing the system flow and work processes visually and then implementing in the frontend UI and backend APIs for seamless notarization and user experience.",
   },
-  // {
-  //   title: "Full Stack Developer",
-  //   company: "vDev Inc",
-  //   date: "January 2024 - Present",
-  //   description:
-  //     "To be added soon",
-  // },
+  {
+    title: "Full Stack Developer",
+    company: "vDev Inc",
+    date: "January 2024 - Present",
+    description:
+      "To be added soon",
+  },
   {
     title: "Motion Design Freelancer",
     company: "Anicut Capital",
