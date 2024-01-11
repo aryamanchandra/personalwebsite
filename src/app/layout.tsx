@@ -11,12 +11,6 @@ const SFText = localFont({
   variable: "--font-sftext-bold",
 });
 
-export const metadata: Metadata = {
-  title: "Aryaman Chandra",
-  description:
-    "Aryaman Chandra is an experienced Full Stack Developer & UI/UX Designer.",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Aryaman Chandra</title>
-        <meta name="description" content="Aryaman Chandra's personal website" />
+        <meta name="description" content="Aryaman Chandra is an experienced Full Stack Developer & UI/UX Designer." />
         <link rel="icon" href="../../public/ac-icon.png" sizes="any" />
         <link rel="canonical" href="https://aryamanchandra.com/" />
         <meta name="author" content="Aryaman Chandra" />

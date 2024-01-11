@@ -43,42 +43,65 @@ export default function Post() {
     Prism.highlightAll();
   }, [querydata]);
 
-  const router = useRouter(); 
+  const router = useRouter();
   const handleBack = () => {
     router.push("/notes");
-  }
+  };
 
   const BackButton = styled(Button)({
-    background:"#111111", 
-    borderRadius:"30px",
-    fontFamily: "__SFTEXT_CAA964", 
-    paddingRight:"15px",
-    paddingLeft:"15px",
+    background: "#111111",
+    borderRadius: "30px",
+    fontFamily: "__SFTEXT_CAA964",
+    paddingRight: "15px",
+    paddingLeft: "15px",
     textTransform: "capitalize",
-  }) 
-  
+  });
+
   return (
     <Box pt={6}>
-      <BackButton onClick={handleBack} startIcon={<ArrowBack />}>Go Back </BackButton>
+      <BackButton onClick={handleBack} startIcon={<ArrowBack />}>
+        Go Back{" "}
+      </BackButton>
       {querydata ? (
         <>
           <Typography variant="h4" pt={4}>
             {querydata.title}
           </Typography>
           <Typography color="primary.light">{querydata.date}</Typography>
-          <Typography color="#666666" py={3}>{querydata.hero}</Typography>
+          <Typography color="#666666" py={3}>
+            {querydata.hero}
+          </Typography>
           <Box p={2}>
             <pre className="language-javascript">
               <code>{querydata.code}</code>
             </pre>
           </Box>
-          <Typography color="#666666" py={3}>{querydata.subtext}</Typography>
-          <Box p={2}>
-            <pre className="language-javascript" style={{backgroundColor:"#110000 !important"}}>
-              <code style={{backgroundColor:"#110000 !important"}}>{querydata.code2}</code>
-            </pre>
-          </Box>
-          <Typography color="#666666" py={3}>{querydata.othertext}</Typography>
+          {querydata.subtext ? (
+            <Typography color="#666666" py={3}>
+              {querydata.subtext}
+            </Typography>
+          ) : (
+            ""
+          )}
+          {querydata.code2 ? (
+            <Box p={2}>
+              <pre
+                className="language-javascript"
+                style={{ backgroundColor: "#110000 !important" }}
+              >
+                <code style={{ backgroundColor: "#110000 !important" }}>
+                  {querydata.code2}
+                </code>
+              </pre>
+            </Box>
+          ) : (
+            ""
+          )}
+          {querydata.othertext ? 
+          <Typography color="#666666" py={3}>
+            {querydata.othertext}
+          </Typography>
+          :""}
         </>
       ) : (
         ""

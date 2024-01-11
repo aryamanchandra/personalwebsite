@@ -56,8 +56,7 @@ const workdata = [
     title: "Full Stack Developer",
     company: "vDev Inc",
     date: "January 2024 - Present",
-    description:
-      "To be added soon",
+    description: "To be added soon",
   },
   {
     title: "Motion Design Freelancer",
@@ -91,14 +90,71 @@ const workdata = [
 
 const notesdata = [
   {
-    title:"Local images in NextJS",
-    date:"28 December 2023",
-    description:"Loading local images in Next JS app",
-    hero:"For loading images in Nextjs, you need to mention it as a relative path to your public repository. So, here I have put images in public/photo/image.jpg. Now, to use this image we import the next/image and use the image tag as below. The catch here is src will be photo/image.jpg (relative path with respect to public folder)",
-    code:'import Image from "next/image"\n'+
-    '<Image src="/photo/image.jpg" alt="some image" width={100} height={100} />',
-    subtext:"In the Image tag imported from next/image it is necessary to mention height and width as integers and you can't mention it as percentages which was a pain to make it responsive. So, a work around that I did was use <img> tag instead it might give you a yellow highlight suggesting to use Image from Next JS but it works so you can ignore the suggestion. You can even add loading='lazy' for better performance of page",
-    code2:'<img src="/photo/image.jpg" alt="some image" loading="lazy" />',
+    title: "Hot reload for React app in Docker",
+    date: "3 January 2023",
+    description: "Enabling hot reload in docker",
+    hero: "To get the hot reload running in docker for React just like it does in not scenario set CHOKIDAR_USEPOLLING = true in your docker-compose.yaml for react environment.",
+    code:
+    "  version: '3.8'\n" +
+    'services:\n' +
+    '  client:\n' +
+    '    build:\n' +
+    '      context: ./app_folder\n' +
+    '      dockerfile: Dockerfile\n' +
+    '    image: sample_image\n' +
+    '    container_name: sample_client\n' +
+    '    ports:\n' +
+    '      - 5173:5173\n' +
+    '    networks:\n' +
+    '      - some_network\n' +
+    '    environment:\n' +
+    '      - CHOKIDAR_USEPOLLING: "true"\n' +
+    '\n' +
+    'networks:\n' +
+    '  sample_network:\n' +
+    '    driver: bridge\n',
+    
+    subtext:'',
+    code2: '',
+  },
+  {
+    title: "Syntax highlighting",
+    date: "29 December 2023",
+    description: "Highlighting Syntax using Prism JS",
+    hero: "For doing sytnax highlighting do npm install prismjs and import prismjs and prism js theme of your choice(I used prism-tomorrow.css). Then using useEffect() do a require for the language you want, for this example I used javascript.",
+    code:
+      'import Prism from "prismjs";\n' +
+      '"prism-tomorrow.css";\n' +
+      'import { useEffect } from "react";\n\n' +
+      "useEffect(() => {\n" +
+      '  if (typeof window !== "undefined") {\n' +
+      '    require("prismjs/components/prism-javascript");\n' +
+      '    require("prismjs/components/prism-markup");\n' +
+      '    require("prismjs/components/prism-css");\n' +
+      '    require("prismjs/components/prism-jsx");\n' +
+      "    Prism.highlightAll();\n" +
+      "  }\n" +
+      "}, []);\n\n" +
+      "export default function Syntax() {\n" +
+      '  <pre className="language-javascript">\n' +
+      "    <code>import Image from next/image</code>\n" +
+      "  </pre>\n" +
+      "}",
+    subtext:
+      "",
+    code2: '',
+  },
+  {
+    title: "Local images in NextJS",
+    date: "28 December 2023",
+    description: "Loading local images in Next JS app",
+    hero: "For loading images in Nextjs, you need to mention it as a relative path to your public repository. So, here I have put images in public/photo/image.jpg. Now, to use this image we import the next/image and use the image tag as below. The catch here is src will be photo/image.jpg (relative path with respect to public folder)",
+    code:
+      'import Image from "next/image"\n' +
+      '<Image src="/photo/image.jpg" alt="some image" width={100} height={100} />',
+    subtext:
+      "In the Image tag imported from next/image it is necessary to mention height and width as integers and you can't mention it as percentages which was a pain to make it responsive. So, a work around that I did was use <img> tag instead it might give you a yellow highlight suggesting to use Image from Next JS but it works so you can ignore the suggestion. You can even add loading='lazy' for better performance of page",
+    code2: '<img src="/photo/image.jpg" alt="some image" loading="lazy" />',
   },
   {
     title: "Adding local fonts to NextJS + MUI app",
@@ -106,10 +162,10 @@ const notesdata = [
     description: "Adding custom fonts to NextJS site which uses MUI.",
     hero: "Adding local fonts to NextJS apps is pain when you have MUI because MUI overrides the NextJS defaults with its own. Here is the solution I found out to this issue. First off, place all your fonts in public/fonts (I have used San Francisco font here). Then import next/font in your src/app/layout.tsx and make a const the way shown below. Then use the const(SFText for me) in the className of body tag in app/layout.tsx ",
     code:
-      '//layout.tsx \n'+
-      'import { ThemeProvider } from "@mui/material";\n'+
+      "//layout.tsx \n" +
+      'import { ThemeProvider } from "@mui/material";\n' +
       'import localFont from "next/font/local";\n\n' +
-      'const SFText = localFont({\n' +
+      "const SFText = localFont({\n" +
       '  src: "./public/fonts/SF-Pro-Text-Regular.woff",\n' +
       '  variable: "--font-sftext-bold",\n' +
       "});\n\n" +
@@ -149,7 +205,8 @@ const notesdata = [
       "const theme = createTheme({\n" +
       "  typography: { fontFamily: `${SFText}`},\n" +
       "});\n",
-    othertext:"Other issues you would face is when you use Buttons and similar stuff it would show some random fonts. You will have to make there font family same as the className that shows up in element. The easiest way to get this is do Ctrl+I and click the element that has your font(SFText) applied to it. Then, under the font family copy it. It would look something like __SFTEXT_CAA964. Now use this as a font family for your button."
+    othertext:
+      "Other issues you would face is when you use Buttons and similar stuff it would show some random fonts. You will have to make there font family same as the className that shows up in element. The easiest way to get this is do Ctrl+I and click the element that has your font(SFText) applied to it. Then, under the font family copy it. It would look something like __SFTEXT_CAA964. Now use this as a font family for your button.",
   },
 ];
 
