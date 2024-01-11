@@ -95,7 +95,7 @@ const notesdata = [
     description: "Enabling hot reload in docker",
     hero: "To get the hot reload running in docker for React just like it does in not scenario set CHOKIDAR_USEPOLLING = true in your docker-compose.yaml for react environment.",
     code:
-    "  version: '3.8'\n" +
+    "version: '3.8'\n" +
     'services:\n' +
     '  client:\n' +
     '    build:\n' +
