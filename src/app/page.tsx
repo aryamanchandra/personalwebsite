@@ -25,7 +25,7 @@ export default function Home() {
         <Socialbar />
       </Box>
       <Box>
-        <Typography variant="h4" pt={15}>
+        <Typography variant="h4" pt={5}>
           Work Experience
         </Typography>
         {workdata &&
@@ -39,7 +39,7 @@ export default function Home() {
             </Box>
           ))}
       </Box>
-      <Box pt={5}>
+      <Box pt={15}>
         <Typography variant="h4" pb={2}>
           Selected Projects
         </Typography>
