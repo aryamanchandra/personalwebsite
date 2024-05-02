@@ -7,7 +7,11 @@ export default function Home() {
   return (
     <Box>
       <Box py={20} sx={{ textAlign: "center" }}>
-        <Typography variant="h1" className="SFDisplay.className" sx={{fontSize: { xs: "3rem", md: "4rem" }}}>
+        <Typography
+          variant="h1"
+          className="SFDisplay.className"
+          sx={{ fontSize: { xs: "3rem", md: "4rem" } }}
+        >
           Hi! I&apos;m Aryaman
         </Typography>
         <Typography
@@ -20,39 +24,43 @@ export default function Home() {
         </Typography>
         <Socialbar />
       </Box>
-      <Box pt={5}>
-        <Typography variant="h4" pb={2}>Selected Projects</Typography>
-        <Stack direction="row" flexWrap="wrap" gap={2}>
-          {projectdata && projectdata.map((element, index) => (
-            <Box key={index} pb={5} sx={{ width: { xs: "100%", sm: "48%" } }}>
-              {/* <Typography>Image will come here</Typography> */}
-              <Typography variant="h6">{element.title}</Typography>
-              <Typography color="primary.light">{element.stack}</Typography>
-              <Typography color="#666666" py={1}>
-                {element.description}
-              </Typography>
-              {/* <Button
-                sx={{ fontFamily: "__SFTEXT_CAA964", background: "#1c1c1c" }}
-              >
-                Case Study
-              </Button> */}
-            </Box>
-          ))}
-        </Stack>
-      </Box>
       <Box>
         <Typography variant="h4" pt={15}>
           Work Experience
         </Typography>
-        {workdata && workdata.map((element, index) => (
-          <Box mt={3} p={3} sx={{ border: "2px solid #1c1c1c" }} key={index}>
-            <Typography>
-              {element.title}, {element.company}
-            </Typography>
-            <Typography color="primary.light">{element.date}</Typography>
-            <Typography color="#666666">{element.description}</Typography>
-          </Box>
-        ))}
+        {workdata &&
+          workdata.map((element, index) => (
+            <Box mt={3} p={3} sx={{ border: "2px solid #1c1c1c" }} key={index}>
+              <Typography>
+                {element.title}, {element.company}
+              </Typography>
+              <Typography color="primary.light">{element.date}</Typography>
+              <Typography color="#666666">{element.description}</Typography>
+            </Box>
+          ))}
+      </Box>
+      <Box pt={5}>
+        <Typography variant="h4" pb={2}>
+          Selected Projects
+        </Typography>
+        <Stack direction="row" flexWrap="wrap" gap={2}>
+          {projectdata &&
+            projectdata.map((element, index) => (
+              <Box key={index} pb={5} sx={{ width: { xs: "100%", sm: "48%" } }}>
+                {/* <Typography>Image will come here</Typography> */}
+                <Typography variant="h6">{element.title}</Typography>
+                <Typography color="primary.light">{element.stack}</Typography>
+                <Typography color="#666666" py={1}>
+                  {element.description}
+                </Typography>
+                {/* <Button
+                sx={{ fontFamily: "__SFTEXT_CAA964", background: "#1c1c1c" }}
+              >
+                Case Study
+              </Button> */}
+              </Box>
+            ))}
+        </Stack>
       </Box>
       <Footer />
     </Box>

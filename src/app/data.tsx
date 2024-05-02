@@ -7,6 +7,12 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const projectdata = [
   {
+    title: "Agrigate",
+    stack: "App Dev | Full Stack Dev | AR | UI/UX",
+    description:
+      "A one stop solution for all the farmer's needs. Provides crop recommendations, disease detection using AI/ML, renting and online marketplace, space evaluation using AR.",
+  },
+  {
     title: "Monumenta",
     stack: "App Dev | Full Stack Dev | UI/UX",
     description:
@@ -30,12 +36,12 @@ const projectdata = [
     description:
       "Line is a road safety app that does behavior tagging, lane detection, distraction detachment to prevent road collisions and inefficient driving.",
   },
-  {
-    title: "Shuttl",
-    stack: "Full Stack Dev | App Dev",
-    description:
-      "A dedicated shuttle app for our college providing students with real-time location updates, ensuring seamless access to campus infrastructure and promoting efficient transportation within the campus.",
-  },
+  // {
+  //   title: "Shuttl",
+  //   stack: "Full Stack Dev | App Dev",
+  //   description:
+  //     "A dedicated shuttle app for our college providing students with real-time location updates, ensuring seamless access to campus infrastructure and promoting efficient transportation within the campus.",
+  // },
   {
     title: "Supplify",
     stack: "Full Stack Dev",
@@ -53,10 +59,23 @@ const workdata = [
       "Built a full stack digital notarization application. Worked on analysing the system flow and work processes visually and then implementing in the frontend UI and backend APIs for seamless notarization and user experience.",
   },
   {
+    title: "Brand Designer & Frontend Developer",
+    company: "Elevateo",
+    date: "March 2023 - Present",
+    description:
+      "Designed complete brand identity including logos, posters and visiting cards, profile documents and website for the organisation.",
+  },
+  {
     title: "Full Stack Developer",
     company: "vDev Inc",
-    date: "January 2024 - Present",
-    description: "To be added soon",
+    date: "Decemeber 2024 - February 2024",
+    description: "Worked on a full stack application for events. Developed a payment pipeline and event creation functionality along with other new functionalities.",
+  },
+  {
+    title: "Frontend Developer",
+    company: "Vivid Mynd Tech",
+    date: "January 2024 - February 2024",
+    description: "Developed a full-fledged responsive Healthcare SAAS web application for a healthcare center.",
   },
   {
     title: "Motion Design Freelancer",
