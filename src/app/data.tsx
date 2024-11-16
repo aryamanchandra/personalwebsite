@@ -53,8 +53,14 @@ const projectdata = [
 const workdata = [
   {
     title: "Full Stack Developer",
+    company:"XL Tech Solutions",
+    date:"Septmber 2024 - Present",
+    description:""
+  },
+  {
+    title: "Full Stack Developer",
     company: "Kommit Techno Legal",
-    date: "October 2023 - Present",
+    date: "October 2023 - June 2024",
     description:
       "Built a full stack digital notarization application. Worked on analysing the system flow and work processes visually and then implementing in the frontend UI and backend APIs for seamless notarization and user experience.",
   },
